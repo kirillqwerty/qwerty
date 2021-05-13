@@ -149,7 +149,7 @@ public:
   }
 
 };
-// Функция определения номера очереди с минимальным количеством элементов
+// Find min element 
 int GetMin(int a, int b, int c, int d, int e)
 {
 	if (a <= b && a <= c && a <= d && a <= e)
@@ -177,7 +177,7 @@ int GetMin(int a, int b, int c, int d, int e)
 }
 
 float Time, TotalTime = 0;
-// функция счета времени + очистка консоли
+// time counter + clean console
 void timer()
 {
 	Sleep(Time = rand() % 1000 + 1);
@@ -189,10 +189,6 @@ Queue<int> cab1 , cab2, cab3, cab4, cab5;
 
 int a,b,c,d,e;
 
-// выбор очереди
-// Eсли 1 прошла очередь,
-// то соответствующей переменной присваеватся большое значение(например 100)
-// и функция GetMin не выберет повторно эту очередь
 void TakePlace()
 {
 	if (a != 100) {
@@ -257,7 +253,7 @@ void display()
 int main()
 {
   srand(time(NULL));
-  // Рандомное заполнение очередей
+  // random queue push
   for (int i = 0; i < 20; i++)
   {
 	switch (rand() % 5)
@@ -290,7 +286,7 @@ int main()
  Sleep(2000);
  system("cls");
 
- // Рандомное заполнение и удаление
+ // random queue push and pop
   for (int stop = 0; stop < 5;)
   {
 	 if (cab1.GetItem() == 1)
